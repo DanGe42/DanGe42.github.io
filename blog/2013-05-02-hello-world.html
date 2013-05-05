@@ -52,6 +52,13 @@ main <span class="fu">=</span> <span class="fu">putStrLn</span> <span class="st"
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'dgeio';
+    var disqus_identifier =
+      (function() {
+        var pathArray = window.location.pathname.split('/');
+        var last = pathArray[pathArray.length - 1];
+        var base = last.split(/\./)[0];
+        return base;
+      })();
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
